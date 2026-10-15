@@ -1,0 +1,9 @@
+Indicator,Type,Attribution / Role,Registrar / ASN,Hosting Provider,Location
+pwthor.live,FQDN,Primary Web Portal & Phishing Vector,Namecheap / Cloudflare,Cloudflare Anycast,Global
+proxy.streamvideo.co.in,FQDN,Unauthorized PenPencil Relay,Hostinger Operations UAB,Heroku (Salesforce / AWS),US / Global
+streamvideo.co.in,Apex Domain,Threat Actor Infrastructure Root,Hostinger Operations UAB,Hostinger,Rajasthan / India
+studyratna.org,FQDN,Syndicate Downloader & Cloner,Hostinger Operations UAB,Hostinger,India
+api.asmultiverse.org,FQDN,Syndicate API Backend,Hostinger Operations UAB,Hostinger,India
+tipsguru.in,FQDN,Ad-Arbitrage & Redirect Interceptor,GoDaddy / Cloudflare,Cloudflare,India
+ca-pub-1761832161109324,AdSense Publisher ID,Illicit Monetization Account,Google LLC,Google AdSense,India
+93.127.173.204,IPv4,C2 / Hostinger Ingestion Server,AS47583 Hostinger,Hostinger,Lithuania / Global

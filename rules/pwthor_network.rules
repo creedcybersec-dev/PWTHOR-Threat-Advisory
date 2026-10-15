@@ -1,0 +1,13 @@
+# Suricata & Snort Detection Signatures
+# Target: PWTHOR Unauthorized Reverse-Proxy Relay & Phishing Vector
+# Author: CreeD CyberSec Threat Intelligence
+# Advisory: https://github.com/creedcybersec-dev/PWTHOR-Threat-Advisory
+
+# 1. Alert on traffic hitting the Heroku reverse-proxy relay
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"CREED-CYBERSEC MALWARE-CNC PWTHOR Unauthorized PenPencil Relay (proxy.streamvideo.co.in)"; flow:established,to_server; http.host; content:"proxy.streamvideo.co.in"; nocase; http.uri; content:"/fetch/api.penpencil.co"; classtype:trojan-activity; sid:3009001; rev:1;)
+
+# 2. Alert on student credential surrender (/study/donate-batch OTP harvesting)
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"CREED-CYBERSEC PHISHING PWTHOR Student Batch Donation OTP Surrender Form"; flow:established,to_server; http.host; content:"pwthor.live"; nocase; http.uri; content:"/study/donate-batch"; http.method; content:"POST"; classtype:bad-unknown; sid:3009002; rev:1;)
+
+# 3. Alert on direct fetch config beacon
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"CREED-CYBERSEC MALWARE-CNC PWTHOR Dynamic Proxy Config Beacon"; flow:established,to_server; http.host; content:"pwthor.live"; nocase; http.uri; content:"/api/direct-fetch-config"; classtype:trojan-activity; sid:3009003; rev:1;)

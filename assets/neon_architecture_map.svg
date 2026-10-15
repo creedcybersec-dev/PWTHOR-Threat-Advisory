@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="background:#05070d;font-family:'JetBrains Mono',monospace,sans-serif;">
+  <defs>
+    <!-- Neon Glow Filters -->
+    <filter id="cyan-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="crimson-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="emerald-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="amber-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="bg-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b101c" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+    <linearGradient id="crimson-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f090d" />
+      <stop offset="100%" stop-color="#0e0406" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0e1726" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background Grid -->
+  <rect width="1200" height="680" fill="url(#grid)" />
+  <rect width="1200" height="680" fill="none" stroke="#162238" stroke-width="2" />
+
+  <!-- Title Header -->
+  <text x="50" y="55" fill="#38bdf8" font-size="13" font-weight="700" letter-spacing="3" filter="url(#cyan-glow)">[CREED-CYBERSEC // THREAT ARCHITECTURE FORENSICS]</text>
+  <text x="50" y="85" fill="#ffffff" font-size="24" font-weight="800" letter-spacing="1">PWTHOR SYNDICATE INFRASTRUCTURE &amp; ATTACK GRAPH</text>
+  <text x="50" y="105" fill="#64748b" font-size="12">Target Domain: pwthor.live | Proxy: proxy.streamvideo.co.in | Upstream: api.penpencil.co</text>
+
+  <!-- SECTION 1: VICTIM SURRENDER / PHISHING (LEFT) -->
+  <g transform="translate(50, 140)">
+    <rect width="320" height="480" rx="8" fill="url(#crimson-card)" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4" />
+    <rect width="320" height="38" rx="8" fill="#e11d48" opacity="0.15" />
+    <text x="16" y="24" fill="#f43f5e" font-size="12" font-weight="700" filter="url(#crimson-glow)">PHASE 01: CREDENTIAL HARVESTING</text>
+    
+    <!-- Student Box -->
+    <rect x="20" y="60" width="280" height="85" rx="6" fill="#080c16" stroke="#334155" stroke-width="1" />
+    <text x="36" y="85" fill="#e2e8f0" font-size="13" font-weight="700">Victim (JEE / NEET Aspirant)</text>
+    <text x="36" y="105" fill="#94a3b8" font-size="11">Targeted with ₹0 "Free Batch" Links</text>
+    <text x="36" y="125" fill="#f43f5e" font-size="11">Surrenders Phone No on /donate-batch</text>
+
+    <!-- Arrow Down -->
+    <path d="M 160 145 L 160 180" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4,4" />
+    <polygon points="156,180 160,188 164,180" fill="#f43f5e" />
+
+    <!-- OTP Intercept Box -->
+    <rect x="20" y="190" width="280" height="110" rx="6" fill="#080c16" stroke="#f43f5e" stroke-width="1" />
+    <text x="36" y="215" fill="#f43f5e" font-size="13" font-weight="700">Phishing Interceptor</text>
+    <text x="36" y="235" fill="#94a3b8" font-size="11">1. Backend requests real PW Login OTP</text>
+    <text x="36" y="255" fill="#94a3b8" font-size="11">2. Victim enters SMS OTP thinking it</text>
+    <text x="36" y="275" fill="#f59e0b" font-size="11">   "authenticates batch donation"</text>
+
+    <!-- Arrow Down -->
+    <path d="M 160 300 L 160 335" stroke="#f43f5e" stroke-width="2" />
+    <polygon points="156,335 160,343 164,335" fill="#f43f5e" />
+
+    <!-- Token Vault -->
+    <rect x="20" y="345" width="280" height="110" rx="6" fill="#080c16" stroke="#f59e0b" stroke-width="1" />
+    <text x="36" y="370" fill="#f59e0b" font-size="13" font-weight="700">Illicit JWT Bearer Pool</text>
+    <text x="36" y="390" fill="#94a3b8" font-size="11">Captured `client_token` &amp; refresh tokens</text>
+    <text x="36" y="410" fill="#94a3b8" font-size="11">Aggregated into PWTHOR Proxy Pool</text>
+    <text x="36" y="430" fill="#f43f5e" font-size="10" font-weight="700">Victim Account Banned / Compromised</text>
+  </g>
+
+  <!-- SECTION 2: MALWARE & PROXY CORE (MIDDLE) -->
+  <g transform="translate(420, 140)">
+    <rect width="360" height="480" rx="8" fill="url(#bg-card)" stroke="#38bdf8" stroke-width="1.5" />
+    <rect width="360" height="38" rx="8" fill="#0284c7" opacity="0.15" />
+    <text x="16" y="24" fill="#38bdf8" font-size="12" font-weight="700" filter="url(#cyan-glow)">PHASE 02: REVERSE PROXY &amp; PACKER CORE</text>
+
+    <!-- Qihoo Jiagu Unpacker -->
+    <rect x="20" y="60" width="320" height="140" rx="6" fill="#060911" stroke="#38bdf8" stroke-width="1" />
+    <text x="36" y="85" fill="#38bdf8" font-size="13" font-weight="700">Android APK: app_sign.apk</text>
+    <text x="36" y="105" fill="#94a3b8" font-size="11">SHA-256: 94a62d438caac7cb68d1da...</text>
+    <text x="36" y="125" fill="#f43f5e" font-size="11">Packer: Qihoo 360 Jiagu (libjiagu.so)</text>
+    <text x="36" y="145" fill="#cbd5e1" font-size="11">• Runtime Dynamic DEX Decryptor (.jgapp)</text>
+    <text x="36" y="165" fill="#cbd5e1" font-size="11">• In-Memory Decryption &amp; Play Protect Evasion</text>
+    <text x="36" y="185" fill="#f59e0b" font-size="11">• Injects Custom Video Player &amp; Ads Engine</text>
+
+    <!-- Arrow Down -->
+    <path d="M 180 200 L 180 235" stroke="#38bdf8" stroke-width="2" />
+    <polygon points="176,235 180,243 184,235" fill="#38bdf8" />
+
+    <!-- Heroku Relay -->
+    <rect x="20" y="245" width="320" height="210" rx="6" fill="#060911" stroke="#a855f7" stroke-width="1" />
+    <text x="36" y="270" fill="#c084fc" font-size="13" font-weight="700">Proxy Backbone (Heroku Router)</text>
+    <text x="36" y="290" fill="#38bdf8" font-size="11">Host: proxy.streamvideo.co.in</text>
+    <text x="36" y="310" fill="#94a3b8" font-size="11">Route: /fetch/api.penpencil.co/*</text>
+    <text x="36" y="330" fill="#cbd5e1" font-size="11">• Strips Origin &amp; Referer Headers</text>
+    <text x="36" y="350" fill="#cbd5e1" font-size="11">• Injects Pooled Student Bearer Tokens</text>
+    <text x="36" y="370" fill="#cbd5e1" font-size="11">• Bypasses Cloudflare &amp; PenPencil WAF</text>
+    <text x="36" y="390" fill="#f59e0b" font-size="11">• Registrar: Hostinger Operations, UAB</text>
+    <text x="36" y="410" fill="#94a3b8" font-size="11">• Operator Attribution: Rajasthan, India</text>
+    <text x="36" y="435" fill="#f43f5e" font-size="11" font-weight="700">STATUS: C&amp;C UNDER ACTIVE TAKEDOWN</text>
+  </g>
+
+  <!-- SECTION 3: UPSTREAM & ADSENSE FRAUD (RIGHT) -->
+  <g transform="translate(830, 140)">
+    <rect width="320" height="480" rx="8" fill="url(#bg-card)" stroke="#10b981" stroke-width="1.5" />
+    <rect width="320" height="38" rx="8" fill="#059669" opacity="0.15" />
+    <text x="16" y="24" fill="#10b981" font-size="12" font-weight="700" filter="url(#emerald-glow)">PHASE 03: UPSTREAM &amp; MONETIZATION</text>
+
+    <!-- Upstream Box -->
+    <rect x="20" y="60" width="280" height="135" rx="6" fill="#080c16" stroke="#10b981" stroke-width="1" />
+    <text x="36" y="85" fill="#10b981" font-size="13" font-weight="700">Legitimate PW Infrastructure</text>
+    <text x="36" y="105" fill="#94a3b8" font-size="11">api.penpencil.co | live.pw.live</text>
+    <text x="36" y="125" fill="#cbd5e1" font-size="11">• Cloudflare Protected API</text>
+    <text x="36" y="145" fill="#cbd5e1" font-size="11">• AWS MediaConvert HLS Chunks</text>
+    <text x="36" y="165" fill="#38bdf8" font-size="11">• Ticket #17430488 In Progress</text>
+    <text x="36" y="185" fill="#10b981" font-size="10" font-weight="700">Target of Siphoning &amp; Abuse</text>
+
+    <!-- Arrow Down -->
+    <path d="M 160 195 L 160 230" stroke="#f59e0b" stroke-width="2" />
+    <polygon points="156,230 160,238 164,230" fill="#f59e0b" />
+
+    <!-- AdSense Fraud Loop -->
+    <rect x="20" y="240" width="280" height="215" rx="6" fill="#080c16" stroke="#f59e0b" stroke-width="1" />
+    <text x="36" y="265" fill="#f59e0b" font-size="13" font-weight="700">Monetization: Ad-Fraud Loops</text>
+    <text x="36" y="285" fill="#38bdf8" font-size="11">Publisher: ca-pub-1761832161109324</text>
+    <text x="36" y="305" fill="#94a3b8" font-size="11">Network: Tips Guru (tipsguru.in)</text>
+    <text x="36" y="325" fill="#cbd5e1" font-size="11">1. Student forced into 6-step redirect</text>
+    <text x="36" y="345" fill="#cbd5e1" font-size="11">2. Arbitrary ad popup scripts run</text>
+    <text x="36" y="365" fill="#cbd5e1" font-size="11">3. CPM impressions forged</text>
+    <text x="36" y="385" fill="#cbd5e1" font-size="11">4. Illicit profits channeled via UPI</text>
+    <text x="36" y="415" fill="#f43f5e" font-size="11" font-weight="700">Breach: IT Act §§ 43/66/66C, BNS § 318</text>
+    <text x="36" y="435" fill="#f59e0b" font-size="10">Reported to Google AdSense Trust</text>
+  </g>
+
+  <!-- INTER-SECTION CONNECTIONS -->
+  <!-- Token Pool to Proxy Backbone -->
+  <path d="M 300 400 L 440 350" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" />
+  <polygon points="436,346 445,348 440,356" fill="#f59e0b" />
+  <text x="330" y="370" fill="#f59e0b" font-size="10" font-weight="700">Tokens Injected</text>
+
+  <!-- Proxy Backbone to Upstream API -->
+  <path d="M 740 310 L 850 160" stroke="#10b981" stroke-width="2" />
+  <polygon points="846,156 855,155 850,165" fill="#10b981" />
+  <text x="760" y="225" fill="#10b981" font-size="10" font-weight="700">Spoofed Requests</text>
+
+  <!-- Footer Watermark -->
+  <text x="50" y="655" fill="#475569" font-size="11">CREED CYBERSEC // ADVANCED THREAT INTELLIGENCE GROUP // VERIFIED EVIDENCE REPOSITORY</text>
+  <text x="1150" y="655" text-anchor="end" fill="#38bdf8" font-size="11" font-weight="700">DISCLOSURE: TICKET #17430488</text>
+</svg>

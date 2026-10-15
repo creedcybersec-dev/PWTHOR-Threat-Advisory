@@ -1,0 +1,5 @@
+File Name,SHA-256,MD5,Format,Category,File Size (Bytes)
+app_sign.apk,94a62d438caac7cb68d1da77af421c3c4d7fe7cf74d03ca7ad9bc776f98fe308,d074b1e56b27e8a939466e13883737b6,Android APK,Packed Dropper / StubApp,14740713
+assets/libjiagu.so,7c2936746401934c56beee36f0fe78cc9d11059f1406d44558e658baef364d96,a90715978a3c8fb5e08b3ba242661338,ELF 32-bit LSB shared object,Qihoo 360 Decryptor,598284
+assets/libjiagu_64.so,81fecf6c8d197607cb3cb9d479133bb83b0f56a5c13886566d5f7560a0f6e5c1,f132e48e895828ec4b8d781b1f855e90,ELF 64-bit LSB shared object,Qihoo 360 64-bit Decryptor,712904
+assets/.jgapp,b154881aeec87b7a5a8f55734293c66f7f3299ea48f9e2b10a08e60ee5a519ee,655909ffc059491cba0bc425a8be8f9b,Encrypted Binary,Encrypted Dalvik Classes,11948202
